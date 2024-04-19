@@ -1,0 +1,4 @@
+scrapy
+pymongo
+pymysql
+psycopg2-binary 
