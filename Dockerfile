@@ -10,8 +10,8 @@ COPY requirements.txt ./
 # Install Scrapy specified in requirements.txt.
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Copy the project source code from the local host to the filesystem of the container at the working directory.
+# Copy the project source code from the local host to the filesystem of the container at the working director>
 COPY . .
 
 # Run the crawler when the container launches.
-CMD [ "python3", "/unitop/spiders/UnitopCourseCrawler.py" ]
+CMD [ "scrapy", "runspider", "./unitop/spiders/UnitopCourseCrawler.py" ]
